@@ -2,9 +2,8 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
-export default { ...defineConfig({
-  build: {outDir: "./docs"},
+export default defineConfig({
+  build: { outDir: "./docs" },
+  base: "/vue-test-page/",
   plugins: [vue()]
-}),
-publicPath: '/vue-test-page/'
-}
+})
